@@ -42,17 +42,23 @@ def chooseimg(file):
 
 window=Tk()
 
-img1 = PhotoImage(file = r"./0.png")
+img1_file = Image.open("./0.png")
+img1_file = img1_file.resize([320,180])
+img1 = ImageTk.PhotoImage(img1_file)
 img_label = Label(image=img1)
 button= Button(window, image=img1,command=lambda: chooseimg("0.png"),borderwidth=0).grid(row=0, column=0,padx=10)
 
 
-img2 = PhotoImage(file = r"./1.png")
+img2_file = Image.open("./1.png")
+img2_file = img2_file.resize([320,180])
+img2 = ImageTk.PhotoImage(img2_file)
 img_label2 = Label(image=img2)
 button2= Button(window, image=img2,command=lambda: chooseimg("1.png"),borderwidth=0).grid(row=20, column=0,padx=10)
 
 
-img3 = PhotoImage(file = r"./2.png")
+img3_file = Image.open("./2.png")
+img3_file = img3_file.resize([320,180])
+img3 = ImageTk.PhotoImage(img3_file)
 img_label3 = Label(image=img3)
 button3= Button(window, image=img3,command=lambda: chooseimg("2.png"),borderwidth=0).grid(row=40, column=0,padx=10)
 
